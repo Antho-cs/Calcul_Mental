@@ -2,7 +2,7 @@ package infrastructure.mysql;
 
 import domaine.ServerException;
 import domaine.User;
-import infrastructure.services.StockageUserInterface;
+import services.StockageUserInterface;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
