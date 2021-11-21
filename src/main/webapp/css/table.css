@@ -19,7 +19,7 @@ button{outline:none!important;border:none;background:0 0}
 button:hover{cursor:pointer}iframe{border:none!important}
 
 .limiter{width:100%;margin:0 auto}
-.container-table100{
+.container-table100 {
     width:100%;
     min-height:100vh;
     background:#c850c0;
@@ -34,15 +34,32 @@ button:hover{cursor:pointer}iframe{border:none!important}
     display:flex;
     align-items:center;
     justify-content:center;
-    flex-wrap:wrap;padding:33px 30px}
-.wrap-table100{width:1170px}
+    padding:33px 30px
+}
+.container-game {
+    width: 960px;
+    height: 560px;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    justify-content: space-evenly;
+    padding: 70px 70px 50px 50px;
+    margin-right: 80px;
+}
+.wrap-table100{
+    width:50%;
+}
+.table-title {
+    text-align: center;
+    padding-bottom: 15px;
+}
 table{
     border-spacing:1;
     border-collapse:collapse;
     background:#fff;
     border-radius:10px;
     overflow:hidden;
-    width:100%;
+    width: 70%;
     margin:0 auto;
     position:relative}
 table *{position:relative}
@@ -75,20 +92,28 @@ tbody tr{
  }
 .column1{
     width:260px;
-    padding-left:40px
-}.column2{width:160px
- }
-.column3{
-    width:245px
-}.column4{
-     width:110px;
-     text-align:right
- }
-.column5{
-    width:170px;
-    text-align:right
+    padding-left:40px;
+    text-align: center;
 }
-.column6{width:222px;text-align:right;padding-right:62px}
+.column2{
+    width:160px;
+    text-align: center;
+
+}
+.column3 {
+    width: 245px;
+    padding-right: 40px;
+    text-align: center;
+}
+
+.zone-game {
+    background-color: darkslategray;
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+
 
 @media screen and (max-width:992px){
     table{display:block}

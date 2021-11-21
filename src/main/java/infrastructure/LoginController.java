@@ -27,12 +27,13 @@ public class LoginController extends HttpServlet {
             Boolean authentificationSuccessful = userService.authenticateUser(user);
 
             if (authentificationSuccessful) {
-                //Génération du token
 
                 resp.setStatus(200);
-                resp.getWriter().write("Authentification Successful !");
+                resp.sendRedirect(req.getContextPath() + "/Acceuil.jsp");
+                //resp.getWriter().write("Authentification Successful !");
             }
             else {
+//                TODO Gérer la redirection vers la page de connexion en cas de Fail
                 resp.getWriter().write("Authentification failed !");
             }
         }
