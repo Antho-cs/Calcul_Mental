@@ -14,7 +14,7 @@
     <div class="container-login100">
         <div class="wrap-login100">
             <div class="login100-pic js-tilt" data-tilt>
-                <img src="images/py.jpg" alt="IMG">
+                <img src="${pageContext.request.contextPath}/images/py.jpg" alt="IMG">
             </div>
             <form class="login100-form validate-form" method="post" action="LoginController">
                 <span class="login100-form-title">Connexion</span>
@@ -46,7 +46,7 @@
                         </a>
                     </div>
                     <div class="text-center p-t-136">
-                        <a class="txt2" href="Crea-user.html">
+                        <a class="txt2" href="/Crea-user">
                             Crée son compte
                             <i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
                         </a>

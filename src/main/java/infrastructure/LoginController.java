@@ -21,6 +21,7 @@ public class LoginController extends HttpServlet {
         String password = req.getParameter("mdp");
         String passwdHashe = DigestUtils.sha256Hex(password);
         try {
+
             User user = new User(login,passwdHashe);
             UserService userService = new UserService(new StockageUserMySQL());
             Boolean authentificationSuccessful = userService.authenticateUser(user);
