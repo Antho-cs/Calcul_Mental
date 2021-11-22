@@ -2,3 +2,4 @@ src/main/java/infrastructure/mysql/ConnexionMySQL.java
 .idea/
 *.iml
 target/
+src/main/java/infrastructure/mysql/ConnexionMySQL.java
