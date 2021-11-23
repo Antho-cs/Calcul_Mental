@@ -10,6 +10,14 @@
     <servlet-name>LoginController</servlet-name>
     <servlet-class>infrastructure.LoginController</servlet-class>
   </servlet>
+  <servlet>
+    <servlet-name>HomeController</servlet-name>
+    <servlet-class>infrastructure.HomeController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>HomeController</servlet-name>
+    <url-pattern>/HomeController</url-pattern>
+  </servlet-mapping>
   <servlet-mapping>
     <servlet-name>LoginController</servlet-name>
     <url-pattern>/LoginController</url-pattern>

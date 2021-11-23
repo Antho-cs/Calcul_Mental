@@ -93,7 +93,7 @@
           <div class=""></div>
           <h2>Jouer</h2>
 
-          <button>Commencer une partie</button>
+          <a href="HomeController">Commencer une partie</a>
 
         </div>
 
