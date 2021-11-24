@@ -20,7 +20,7 @@ public class StockageUserMySQL implements StockageUserInterface {
 
     @Override
     public Boolean authenticateUser(User user) {
-        String query = "SELECT * FROM users where login = ? and hashed_passwd = ?";
+        String query = "SELECT * FROM user where login = ? and password = ?";
         try {
             PreparedStatement statement = connection.prepareStatement(query);
             statement.setString(1,user.getLogin());
@@ -29,7 +29,7 @@ public class StockageUserMySQL implements StockageUserInterface {
 
             if (resultSet.next()) {
                 String login = resultSet.getString("login");
-                String hashed_password = resultSet.getString("hashed_passwd");
+                String hashed_password = resultSet.getString("password");
                 return true;
             }
             else {
