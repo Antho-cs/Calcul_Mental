@@ -20,9 +20,10 @@ public class HomeController extends HttpServlet {
 
         // TODO Voir pour l'appel a la génération de calcul
         // Appel de l'expression pour générer un calcul
-        /*Expression expression = new Expression();
-        expression.generator();*/
 
+        Expression expression = new Expression();
+        expression.generator();
+        System.out.println(expression.generator());
     }
 
     protected void doPost() {
