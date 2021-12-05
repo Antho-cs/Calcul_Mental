@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="FR">
 <head>
@@ -94,6 +93,8 @@
           <h2>Jouer</h2>
 
           <a href="HomeController">Commencer une partie</a>
+          <!-- Appel de la variable recuperer depuis le controlleur -->
+          <h1>${ expression }</h1>
 
         </div>
 

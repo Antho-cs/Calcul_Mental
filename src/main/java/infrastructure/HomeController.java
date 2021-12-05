@@ -18,12 +18,18 @@ public class HomeController extends HttpServlet {
 //        TODO Construire la requete pour afficher les 10 meilleurs Joueurs
         //   SELECT * FROM user ORDER BY bestscore DESC Limit 10;
 
-        // TODO Voir pour l'appel a la génération de calcul
         // Appel de l'expression pour générer un calcul
-
         Expression expression = new Expression();
-        expression.generator();
-        System.out.println(expression.generator());
+        String exp = String.valueOf(expression.generator());
+        System.out.println(exp);
+        req.setAttribute("expression", exp);
+
+        req.getRequestDispatcher("/Acceuil.jsp").forward(req, response);
+
+
+        String operators[]=exp.split("[0-100]+");
+        String operands[]=exp.split("[+-]");
+
     }
 
     protected void doPost() {

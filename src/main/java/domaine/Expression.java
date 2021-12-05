@@ -59,7 +59,7 @@ public class Expression {
 
     // Méthodes de génération de calcul
     public List<String> generator() {
-        // Ajoute 2 nombre aléatoire dans la pile tout en y ajoutant le nombre pour le resultat
+        // Ajoute 3 nombre aléatoire dans la pile tout en y ajoutant le nombre pour le resultat
         Integer j = random(0,101);
         Integer k = random(0,101);
         Integer z = random(0,101);
@@ -67,22 +67,30 @@ public class Expression {
         String jS = j.toString();
         String kS = k.toString();
         String zS = z.toString();
-
-        stack.add(zS);
+        // Ajout dans la pile
         stack.add(jS);
         stack.add(kS);
+        stack.add(zS);
 
+        // Ajout d'un opératuer Binaires aléatoires
         String cz = choixOpBinaire();
         stack.add(cz);
-
+        // Ajout d'un opérateur Choisi aléatoirement ( Binaires ou Unaires )
         switch (random(0,2)){
             case 0:
                 String ch = choixOpUnaire();
                 stack.add(ch);
+                if(ch == "inv"){
+               // resultat = j, cz, k, 1 / , z;
+                }
+                else {
+                    //resultat = j, cz, k, Math.sqrt(z);
+                }
                 break;
             case 1:
                 String cd = choixOpBinaire();
                 stack.add(cd);
+               // resultat = String.valueOf(j ,  cz , k , cd, z);
                 break;
         }
 
@@ -95,7 +103,6 @@ public class Expression {
 //        stack.push(choixOpBinaire());
 //        stack.push(choixOpBinaire());
 
-        System.out.println(stack);
             /* Si c'est un nombre on empile
                 - si c'est un binaire on dépile 2 valeurs on fait l'opération et on empile le resultat
                 - si c'est unnaire on dépile de 1 on fait l'opération et empile le résultat
