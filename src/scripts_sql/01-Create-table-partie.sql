@@ -1,0 +1,1 @@
+create table score (score int primary key not null auto_increment, id_user int not null, foreign key (id_user) references users(id));

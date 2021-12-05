@@ -6,8 +6,8 @@ import java.sql.SQLException;
 
 import com.mysql.jdbc.Driver;
 public enum ConnexionMySQL {
-//    CONNECTION("jdbc:mysql://localhost:3306/expressions_polonaises_b3?user=root&password=");
-    CONNECTION("jdbc:mysql://localhost:3306/calcul_mental?user=root&password=");
+    CONNECTION("jdbc:mysql://localhost:3306/calcul_mental?user=user_expressions_polonaises&password=ep");
+    //CONNECTION("jdbc:mysql://localhost:3306/calcul_mental?user=root&password=");
     private Connection connection;
     private ConnexionMySQL(String url) {
         try {

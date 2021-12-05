@@ -6,6 +6,7 @@ import infrastructure.mysql.StockageUserMySQL;
 import services.UserService;
 import org.apache.commons.codec.digest.DigestUtils;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -29,8 +30,9 @@ public class LoginController extends HttpServlet {
             if (authentificationSuccessful) {
 
                 resp.setStatus(200);
-                resp.sendRedirect(req.getContextPath() + "/Acceuil.jsp");
-                //resp.getWriter().write("Authentification Successful !");
+                RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/HomeController");
+                dispatcher.forward(req,resp);
+                //resp.sendRedirect(req.getContextPath() + "/");
             }
             else {
 //                TODO Gérer la redirection vers la page de connexion en cas de Fail

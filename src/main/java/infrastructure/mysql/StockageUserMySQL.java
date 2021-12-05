@@ -30,6 +30,7 @@ public class StockageUserMySQL implements StockageUserInterface {
             if (resultSet.next()) {
                 String login = resultSet.getString("login");
                 String hashed_password = resultSet.getString("password");
+
                 return true;
             }
             else {
